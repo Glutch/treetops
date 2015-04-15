@@ -16,15 +16,17 @@ Router.route('/Third', function() {
 
 
 Meteor.subscribe('messages')
-
+Meteor.subscribe('users')
 
 var M = Message.find({}, {sort: {timestamp: 1}})
 
+var scrollToBottom = function() {
+	var chat = $('.chat')[0]
+	chat.scrollTop = chat.scrollHeight
+}
+
 M.observe({
-	added: function() {
-		var chat = $('.chat')[0]
-		chat.scrollTop = chat.scrollHeight
-	}
+	added: scrollToBottom
 })
 
 
@@ -62,6 +64,7 @@ Template.submitMessage.events({
 	'submit form': function(e) {
 		e.preventDefault()
 		Meteor.call('sendMessage', e.target.message.value)
+		scrollToBottom()
 		e.target.message.value = ''
 	}
 })

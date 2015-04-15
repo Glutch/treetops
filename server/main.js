@@ -5,6 +5,10 @@ Meteor.methods({
 	}
 })
 
-Meteor.publish('messages', function () {
+Meteor.publish('messages', function() {
 	return Message.find({})
+})
+
+Meteor.publish('users', function() {
+	return Meteor.users.find({})
 })
