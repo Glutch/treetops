@@ -28,10 +28,14 @@ M.observe({
 })
 
 Template.layout.events({
-	'click #login': function(e) {
-		if (e.target === document.getElementById('login')) {
-			e.target.classList.add('swosh')
-		}
+	'submit #sign-in': function(e) {
+		e.preventDefault()
+		var fields = $(e.target).toObject()
+		Meteor.loginWithPassword(fields.username, fields.password, function(err) {
+			if (err) {
+				alert(err.reason)
+			}
+		})
 	},
 	'submit #sign-up': function(e) {
 		e.preventDefault()
@@ -74,6 +78,15 @@ Template.chat.helpers({
 	},
 	getUsername: function(user_id) {
 		return Meteor.users.find({_id: user_id}).username
+	}
+})
+
+Template.sidebar.events({
+	'click #log-out': function() {
+		console.log(Meteor.user())
+		Meteor.logout(function(err) {
+			console.log(err)
+		})
 	}
 })
 

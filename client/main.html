@@ -14,13 +14,18 @@
 </template>
 
 <template name="login">
-	<div id="login">
+	<div id="login" class="{{#if currentUser}}swosh{{/if}}">
 		TREETOPS
 		<form id="sign-up">
 			<input type="text" name="username" placeholder="Username" />
 			<input type="text" name="email" placeholder="Email" />
 			<input type="password" name="password" placeholder="Password" />
-			<input type="submit" />
+			<input type="submit" value="Sign up" />
+		</form>
+		<form id="sign-in">
+			<input type="text" name="username" placeholder="Username" />
+			<input type="password" name="password" placeholder="Password" />
+			<input type="submit" value="Sign in" />
 		</form>
 	</div>
 </template>
@@ -91,6 +96,7 @@
 				<div class="recentMessage">Dildo</div>
 			</div>
 		</div>
+		<button id="log-out">Log out</button>
 	</div>
 </template>
 
