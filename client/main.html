@@ -59,21 +59,13 @@
 <template name="rightbar">
 	<div class="rightbar">
 		<div class="header">Recent Conversations</div>
+		{{#each users}}
 		<div class="person">
 			<div class="image"></div>
-			<div class="name">Hampus Hallman</div>
+			<div class="name">{{username}}</div>
 			<div class="recentMessage">Dildo</div>
 		</div>
-		<div class="person">
-			<div class="image"></div>
-			<div class="name">Adolf Hitler</div>
-			<div class="recentMessage">Dildo</div>
-		</div>
-		<div class="person">
-			<div class="image"></div>
-			<div class="name">Åsa Romson</div>
-			<div class="recentMessage">Dildo</div>
-		</div>
+		{{/each}}
 	</div>
 </template>
 
@@ -87,16 +79,13 @@
 		</div>
 		<div class="friends">
 			<div class="header">Friends</div>
+			{{#each users}}
 			<div class="person">
 				<div class="image"></div>
-				<div class="name">Hampus Hallman</div>
+				<div class="name">{{username}}</div>
 				<div class="recentMessage">Dildo</div>
 			</div>
-			<div class="person">
-				<div class="image"></div>
-				<div class="name">Fredrik Reinfeldt</div>
-				<div class="recentMessage">Dildo</div>
-			</div>
+			{{/each}}
 		</div>
 		<button id="log-out">Log out</button>
 	</div>

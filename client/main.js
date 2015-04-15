@@ -30,12 +30,6 @@ M.observe({
 })
 
 
-Template.sidebar.helpers({
-	'displayUsername': function(){
-		return Meteor.user().username
-	}
-})
-
 Template.layout.events({
 	'submit #sign-in': function(e) {
 		e.preventDefault()
@@ -97,6 +91,21 @@ Template.sidebar.events({
 		Meteor.logout(function(err) {
 			console.log(err)
 		})
+	}
+})
+
+Template.sidebar.helpers({
+	displayUsername: function() {
+		return Meteor.user().username
+	},
+	users: function() {
+		return Meteor.users.find({})
+	}
+})
+
+Template.rightbar.helpers({
+	users: function() {
+		return Meteor.users.find({})
 	}
 })
 
