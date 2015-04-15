@@ -15,7 +15,7 @@
 
 <template name="login">
 	<div id="login" class="{{#if currentUser}}swosh{{/if}}">
-		<div class="loginBox">
+		<div class="loginBox {{#if currentUser}}swosh{{/if}}">
 			<div class="mainLogo">TREETOPS</div>
 		<form id="sign-up">
 			<input class="input" type="text" name="username" placeholder="Username" autocomplete="off"/>
