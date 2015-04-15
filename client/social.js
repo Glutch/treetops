@@ -22,25 +22,17 @@ Template.layout.events({
 
 //Chat
 Template.submitMessage.events({
-	'submit form': function(event){
-		event.preventDefault();
-		var newMessage = event.target.message.value;
-		var serverTime = Session.get('time');
-		//var currentUserId = Meteor.user().username;
-		Chat.insert({
-			message: newMessage,
-			user: 'Glutch',
-			timestamp: serverTime
-			//createdBy: currentUserId
-		})
-		event.target.message.value = "";
+	'submit form': function(e) {
+		e.preventDefault()
+		Meteor.call('sendMessage', e.target.message.value)
+		e.target.message.value = ''
 	}
 });
 
 Template.chat.helpers({
 	'messageGrab': function(){
 		//var currPage = Session.get('currentPage');
-		return Chat.find({user: 'Glutch'}, {sort: {timestamp: 1}});
+		return Chat.find({}, {sort: {timestamp: -1}});
 	},
 	'formatDate': function(date) {
 		return moment(date).format('MMMM Do');
