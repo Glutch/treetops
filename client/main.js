@@ -21,7 +21,7 @@ Meteor.subscribe('messages')
 Chat.find({}).observe({
 	added: function() {
 		var chat = $('.chat')[0]
-		chat.scrollTop = chat.scrollHeight + 100
+		chat.scrollTop = chat.scrollHeight
 	}
 })
 
