@@ -40,8 +40,8 @@
 	</div>
 	<div class="chat">
 	<div class="message">Hello</div>
-	{{#each messageGrab}}
-		<div class="message r">{{message}}</div>
+	{{#each ya}}
+		<div class="message {{#if equals from currentUser._id}}r{{/if}}">{{message}}</div>
 	{{/each}}
 	</div>
 	{{> submitMessage}}
@@ -74,17 +74,17 @@
 		<div class="logo">TREETOPS</div>
 		<div class="profile">
 			<div class="image"><img src="https://pbs.twimg.com/profile_images/434824832258023424/4wmPc-I0.png" alt=""></div>
-			<div class="name">{{displayUsername}}</div>
+			<div class="name">{{currentUser.username}}</div>
 			<div class="location">Sweden</div>
 		</div>
 		<div class="friends">
 			<div class="header">Friends</div>
 			{{#each users}}
-			<div class="person">
+			<a href="/@{{_id}}" class="person">
 				<div class="image"></div>
 				<div class="name">{{username}}</div>
 				<div class="recentMessage">Dildo</div>
-			</div>
+			</a>
 			{{/each}}
 		</div>
 		<button id="log-out">Log out</button>

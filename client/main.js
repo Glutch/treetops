@@ -1,14 +1,14 @@
 Meteor.subscribe('messages')
 Meteor.subscribe('users')
 
-var M = Message.find({}, {sort: {timestamp: 1}})
+var M = Message.find({}, {sort: {date: 1}})
 
 var scrollToBottom = function() {
 	var chat = $('.chat')[0]
 	chat.scrollTop = chat.scrollHeight
 }
 
-M.observe({
+Message.find().observe({
 	added: scrollToBottom
 })
 
@@ -40,17 +40,13 @@ Template.layout.events({
 Template.submitMessage.events({
 	'submit form': function(e) {
 		e.preventDefault()
-		Meteor.call('sendMessage', e.target.message.value)
+		Meteor.call('sendMessage', e.target.message.value, window.location.pathname.substr(2))
 		scrollToBottom()
 		e.target.message.value = ''
 	}
 })
 
 Template.chat.helpers({
-	messageGrab: function() {
-		//var currPage = Session.get('currentPage')
-		return M
-	},
 	formatDate: function(date) {
 		return moment(date).format('MMMM Do')
 	},
@@ -98,4 +94,8 @@ Meteor.startup(function() {
 			Session.set('time', result)
 		})
 	}, 1000)
+})
+
+UI.registerHelper('equals', function(a, b) {
+	return a === b
 })
