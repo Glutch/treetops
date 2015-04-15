@@ -35,9 +35,14 @@ Template.layout.events({
 	},
 	'submit #sign-up': function(e) {
 		e.preventDefault()
-		console.log(e.target.username.value)
-		console.log(e.target.email.value)
-		console.log(e.target.password.value)
+		var fields = $(e.target).toObject()
+		 Accounts.createUser(fields, function(err) {
+			if (err) {
+				console.log(err)
+			} else {
+				console.log('success')
+			}
+		})
 	}
 })
 
