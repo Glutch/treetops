@@ -60,11 +60,11 @@
 	<div class="rightbar">
 		<div class="header">Recent Conversations</div>
 		{{#each users}}
-		<div class="person">
+		<a href="/@{{_id}}" class="person">
 			<div class="image"></div>
 			<div class="name">{{username}}</div>
 			<div class="recentMessage">Dildo</div>
-		</div>
+		</a>
 		{{/each}}
 	</div>
 </template>
