@@ -1,22 +1,23 @@
 <head>
-    <title>TREETOPS</title>
-    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'>
+		<title>Treetops</title>
+		<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'>
 </head>
 
 <template name="layout">
-    {{> login}}
-    {{> sidebar}}
-    {{> menu}}
-    <div class="content">
+	{{> login}}
+	{{> sidebar}}
+	{{> menu}}
+	<div class="content">
 		{{> yield}}
-    </div>
+	</div>
 	{{> rightbar}}
 </template>
 
 <template name="login">
-    <div class="login">
-        TREETOPS
-    </div>
+	<div class="login">
+		TREETOPS
+		{{> loginButtons}}
+	</div>
 </template>
 
 <template name="chat">
@@ -27,9 +28,9 @@
 	</div>
 	<div class="chat">
 	<div class="message">Hello</div>
-		{{#each messageGrab}}
-			<div class="message r">{{message}}</div>
-		{{/each}}
+	{{#each messageGrab}}
+		<div class="message r">{{message}}</div>
+	{{/each}}
 	</div>
 	{{> submitMessage}}
 </template>
@@ -37,9 +38,9 @@
 <template name="submitMessage">
 	<div class="chatBox">
 		<form>
-            <input class="messageInput" type="text" name="message" placeholder="Write a message..." autocomplete="off">
-            <input type="submit" value="Submit" style="width: 100px; display: none;">
-        </form>
+			<input class="messageInput" type="text" name="message" placeholder="Write a message..." autocomplete="off">
+			<input type="submit" value="Submit" style="width: 100px; display: none;">
+		</form>
 	</div>
 </template>
 
@@ -65,16 +66,16 @@
 </template>
 
 <template name="sidebar">
-    <div class="sidebar">
-        <div class="logo">TREETOPS</div>
-        <div class="profile">
-            <div class="image"><img src="https://pbs.twimg.com/profile_images/434824832258023424/4wmPc-I0.png" alt=""></div>
-            <div class="name">Oliver Johansson</div>
-            <div class="location">Sweden</div>
-        </div>
-        <div class="friends">
-        	<div class="header">Friends</div>
-        	<div class="person">
+	<div class="sidebar">
+		<div class="logo">TREETOPS</div>
+		<div class="profile">
+				<div class="image"><img src="https://pbs.twimg.com/profile_images/434824832258023424/4wmPc-I0.png" alt=""></div>
+				<div class="name">Oliver Johansson</div>
+				<div class="location">Sweden</div>
+		</div>
+		<div class="friends">
+			<div class="header">Friends</div>
+			<div class="person">
 				<div class="image"></div>
 				<div class="name">Hampus Hallman</div>
 				<div class="recentMessage">Dildo</div>
@@ -85,15 +86,15 @@
 				<div class="recentMessage">Dildo</div>
 			</div>
 		</div>
-    </div>
+	</div>
 </template>
 
 <template name="menu">
-    <div class="menu">
-        <div class="menuIns">
-            <a href="/" id="Cupcake" class="button">Cupcake</a>
-            <a href="/Second" id="Brownies" class="button">Brownies</a>
-            <a href="/Third" id="Cookies" class="button">Cookies</a>
-        </div>
-    </div>    
+	<div class="menu">
+		<div class="menuIns">
+			<a href="/" id="Cupcake" class="button">Cupcake</a>
+			<a href="/Second" id="Brownies" class="button">Brownies</a>
+			<a href="/Third" id="Cookies" class="button">Cookies</a>
+		</div>
+	</div>    
 </template>

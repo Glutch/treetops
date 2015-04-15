@@ -18,7 +18,9 @@ Router.route('/Third', function() {
 Meteor.subscribe('messages')
 
 
-Message.find().observe({
+var M = Message.find({}, {sort: {timestamp: 1}})
+
+M.observe({
 	added: function() {
 		var chat = $('.chat')[0]
 		chat.scrollTop = chat.scrollHeight
@@ -43,7 +45,7 @@ Template.submitMessage.events({
 Template.chat.helpers({
 	messageGrab: function() {
 		//var currPage = Session.get('currentPage')
-		return Message.find({}, {sort: {timestamp: 1}})
+		return M
 	},
 	formatDate: function(date) {
 		return moment(date).format('MMMM Do')
