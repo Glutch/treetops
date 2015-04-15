@@ -1,20 +1,3 @@
-Router.configure({
-	layoutTemplate: 'layout'
-})
-
-Router.route('/', function() {
-	this.render('chat')
-})
-
-Router.route('/yes', function() {
-	this.render('home')
-})
-
-Router.route('/Third', function() {
-	this.render('Third')
-})
-
-
 Meteor.subscribe('messages')
 Meteor.subscribe('users')
 
