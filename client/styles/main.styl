@@ -18,11 +18,72 @@ body{
 	font-size 49px
 	color white
 	text-align center
-	line-height 300px
 	font-weight 600
 	&.swosh
 		top -100%
 		opacity 0
+		
+	::-webkit-input-placeholder { /* WebKit browsers */
+    color:    #fff;
+	}
+	:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+	color:    #fff;
+	}
+	::-moz-placeholder { /* Mozilla Firefox 19+ */
+	color:    #fff;
+	}
+	:-ms-input-placeholder { /* Internet Explorer 10+ */
+	color:    #fff;
+	}
+		
+	.loginBox
+		width 400px
+		height 500px
+		position fixed
+		left 50%
+		margin-left -200px
+		top 20%
+		
+		.mainLogo
+			line-height 100px
+		
+	form
+		.input
+			width 300px
+			background none
+			border 0px
+			border 1px solid white
+			border-bottom 0px
+			padding 20px
+			color white
+			display table
+			margin 0px auto
+			font-size 14px
+			font-weight 200
+			outline none
+			background rgba(0,0,0,0.1)
+			
+			&:nth-last-child(2)
+				border-bottom 1px solid white
+				border-radius 0px 0px 10px 10px
+				
+			&:first-child
+				border-top 1px solid white
+				border-bottom 0px
+				border-radius 10px 10px 0px 0px
+				
+		.submit
+			padding 20px 50px
+			background none
+			color white
+			border-radius: 10px
+			border 1px solid white
+			cursor pointer
+			transition 0.1s
+			
+			&:hover
+				background white
+				color black
 
 .friends
 	.header
