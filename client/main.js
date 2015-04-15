@@ -14,6 +14,9 @@ Router.route('/Third', function () {
 	this.render('Third');
 });
 
+
+Meteor.subscribe('messages')
+
 Template.layout.events({
 	'click .login': function (e) {
 		$(e.target).addClass('swosh');
@@ -30,7 +33,7 @@ Template.submitMessage.events({
 });
 
 Template.chat.helpers({
-	'messageGrab': function(){
+	'messageGrab': function() {
 		//var currPage = Session.get('currentPage');
 		return Chat.find({}, {sort: {timestamp: -1}});
 	},
@@ -40,10 +43,10 @@ Template.chat.helpers({
 	'formatTime': function(date) {
 		return moment(date).format('HH:mm:ss');
 	},
-	'showUsername': function(){
+	'showUsername': function() {
 		return Meteor.user().username
 	},
-	'currentPageFisk': function(){
+	'currentPageFisk': function() {
 		return Session.get('currentPage');
 	},
 	getUsername: function (user_id) {
