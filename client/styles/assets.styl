@@ -1,0 +1,26 @@
+vendor(property, args)
+	-webkit-{property} args
+	-moz-{property} args
+	-ms-{property} args
+	{property} args
+	
+border-radius()
+	vendor(border-radius, arguments)
+	
+transform()
+	vendor(transform, arguments)
+
+transition()
+	vendor(transition, arguments)
+
+transition-delay()
+	vendor(transition-delay, arguments)
+
+animation()
+	vendor(animation, arguments)
+
+animation-delay()
+	vendor(animation-delay, arguments)
+
+noUserSelect()
+	vendor(user-select, none)
