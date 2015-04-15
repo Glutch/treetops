@@ -14,7 +14,7 @@
 </template>
 
 <template name="login">
-	<div id="login">
+	<div id="login" class="{{#if currentUser}}swosh{{/if}}">
 		<div class="loginBox">
 			<div class="mainLogo">TREETOPS</div>
 		<form id="sign-up">
@@ -23,8 +23,12 @@
 			<input class="input" type="password" name="password" placeholder="Password" autocomplete="off"/>
 			<input class="submit" type="submit" />
 		</form>
+		<form id="sign-in">
+			<input class="input" type="text" name="username" placeholder="Username" />
+			<input class="input" type="password" name="password" placeholder="Password" />
+			<input class="submit" type="submit" value="Sign in" />
+		</form>
 		</div>
-		
 	</div>
 </template>
 
@@ -94,6 +98,7 @@
 				<div class="recentMessage">Dildo</div>
 			</div>
 		</div>
+		<button id="log-out">Log out</button>
 	</div>
 </template>
 

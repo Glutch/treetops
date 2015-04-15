@@ -1,3 +1,7 @@
 $.fn.toObject = function() {
-	console.log('xD')
+	var fields = {}
+	$(this).find('[name]').each(function() {
+		fields[this.name] = this.value
+	})
+	return fields
 }
