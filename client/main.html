@@ -40,7 +40,7 @@
 	</div>
 	<div class="chat">
 	<div class="message">Hello</div>
-	{{#each ya}}
+	{{#each messages}}
 		<div class="message {{#if equals from currentUser._id}}r{{/if}}">{{message}}</div>
 	{{/each}}
 	</div>
