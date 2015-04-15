@@ -18,6 +18,7 @@ Router.route('/Third', function() {
 Meteor.subscribe('messages')
 
 
+
 Chat.find({}).observe({
 	added: function() {
 		var chat = $('.chat')[0]
