@@ -6,5 +6,5 @@ Meteor.methods({
 })
 
 Meteor.publish('messages', function () {
-	return Chat.find({})
+	return Message.find({})
 })
