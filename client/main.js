@@ -28,8 +28,16 @@ M.observe({
 })
 
 Template.layout.events({
-	'click .login': function(e) {
-		$(e.target).addClass('swosh')
+	'click #login': function(e) {
+		if (e.target === document.getElementById('login')) {
+			e.target.classList.add('swosh')
+		}
+	},
+	'submit #sign-up': function(e) {
+		e.preventDefault()
+		console.log(e.target.username.value)
+		console.log(e.target.email.value)
+		console.log(e.target.password.value)
 	}
 })
 

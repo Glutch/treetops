@@ -14,9 +14,14 @@
 </template>
 
 <template name="login">
-	<div class="login">
+	<div id="login">
 		TREETOPS
-		{{> loginButtons}}
+		<form id="sign-up">
+			<input type="text" name="username" placeholder="Username" />
+			<input type="text" name="email" placeholder="Email" />
+			<input type="password" name="password" placeholder="Password" />
+			<input type="submit" />
+		</form>
 	</div>
 </template>
 
@@ -69,9 +74,9 @@
 	<div class="sidebar">
 		<div class="logo">TREETOPS</div>
 		<div class="profile">
-				<div class="image"><img src="https://pbs.twimg.com/profile_images/434824832258023424/4wmPc-I0.png" alt=""></div>
-				<div class="name">Oliver Johansson</div>
-				<div class="location">Sweden</div>
+			<div class="image"><img src="https://pbs.twimg.com/profile_images/434824832258023424/4wmPc-I0.png" alt=""></div>
+			<div class="name">Oliver Johansson</div>
+			<div class="location">Sweden</div>
 		</div>
 		<div class="friends">
 			<div class="header">Friends</div>
