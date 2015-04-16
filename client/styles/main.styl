@@ -26,20 +26,19 @@ body
 	text-align center
 	font-weight 600
 	
-		
-	::-webkit-input-placeholder { /* WebKit browsers */
-    color:    #fff;
+	::-webkit-input-placeholder {
+		color #fff
 	}
-	:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
-	color:    #fff;
+	:-moz-placeholder {
+		color #fff
 	}
-	::-moz-placeholder { /* Mozilla Firefox 19+ */
-	color:    #fff;
+	::-moz-placeholder {
+		color #fff
 	}
-	:-ms-input-placeholder { /* Internet Explorer 10+ */
-	color:    #fff;
+	:-ms-input-placeholder {
+		color #fff
 	}
-		
+
 	.loginBox
 		width 400px
 		height 500px
@@ -106,6 +105,9 @@ body
 	cursor: pointer;
 	display table
 
+	&:hover
+		background #f5f5f5
+
 	.image
 		width: 50px;
 		height: 50px;
@@ -132,8 +134,6 @@ body
 		font-size: 13px;
 		color: #999;
 		
-	&:hover
-		background #f5f5f5
 			
 .rightbar
 	width 300px
@@ -247,9 +247,9 @@ body
 			cursor: pointer;
 			transition 0.1s !important;
 			
-		.next:hover
-			background #4780D7
-			color white
+			&:hover
+				background #4780D7
+				color white
 		
 	.chat
 		padding 20px
@@ -270,10 +270,10 @@ body
 			clear both
 			margin-top: 10px
 			
-		.r
-			float right
-			background #528DE7
-			color #fff
+			&.r
+				float right
+				background #528DE7
+				color #fff
 	
 	.chatBox
 		position fixed

@@ -6,7 +6,12 @@ Meteor.methods({
 })
 
 Meteor.publish('messages', function() {
-	return Message.find({})
+	return Message.find({
+		$or: [
+			{from: this.userId},
+			{to: this.userId}
+		]
+	})
 })
 
 Meteor.publish('users', function() {

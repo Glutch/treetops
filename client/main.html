@@ -1,6 +1,6 @@
 <head>
-		<title>Treetops</title>
-		<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'>
+	<title>Treetops</title>
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'>
 </head>
 
 <template name="layout">
@@ -39,7 +39,6 @@
 		<div class="next">New Person</div>
 	</div>
 	<div class="chat">
-	<div class="message">Hello</div>
 	{{#each messages}}
 		<div class="message {{#if equals from currentUser._id}}r{{/if}}">{{message}}</div>
 	{{/each}}
