@@ -272,6 +272,11 @@ body
 			width 60%
 			float left
 			
+		.rocket
+			position absolute
+			margin-left -35px
+			margin-top 3px
+			
 		.next
 			line-height: 39px;
 			height: 40px;
@@ -285,9 +290,14 @@ body
 			transition: 0.1s !important;
 			border 2px solid white
 			font-weight 600
-			
+	
 			&:hover
-				//border 2px solid blue
+				-webkit-animation-iteration-count: infinite;
+				-webkit-animation-name: example; /* Chrome, Safari, Opera */
+				-webkit-animation-duration: 0.2s; /* Chrome, Safari, Opera */
+				animation-name: example;
+				animation-duration: 0.2s;
+				animation-iteration-count: infinite;
 		
 	.chat
 		padding 20px
@@ -336,4 +346,20 @@ body
 				font-size 15px
 				border 0px
 				outline none
+				
+/* Chrome, Safari, Opera */
+@-webkit-keyframes example {
+    0%   {margin-top: -2x}
+    25%  {margin-right: -2px}
+    50%  {margin-left: -2px}
+    100% {margin-bottom: -2px}
+}
+
+/* Standard syntax */
+@keyframes example {
+    0%   {margin-top: -2x}
+    25%  {margin-right: -2px}
+    50%  {margin-left: -2px}
+    100% {margin-bottom: -2px}
+}
 			
