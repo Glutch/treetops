@@ -84,15 +84,16 @@
 		<div class="friends">
 			<div class="header">Friends</div>
 			{{#each users}}
-			<a href="/@{{_id}}" class="person">
+			<a href="/@{{_id}}" class="person sidebarPerson">
 				<div class="image"></div>
-				<div class="name">{{username}}</div>
-				<div class="recentMessage">Dildo</div>
+				<div class="name sidebarName">{{username}}</div>
+				<div class="recentMessage sidebarRecentMessage">Dildo</div>
 			</a>
 			{{/each}}
 		</div>
-		<button id="log-out">Log out</button>
+		
 	</div>
+	<button id="log-out">Sign out</button>
 </template>
 
 <template name="menu">

@@ -7,9 +7,10 @@ body
 	display table
 	margin 0px
 	font-family 'Open Sans', sans-serif
+	overflow: hidden
 
 .swosh
-	right -100% !important
+	right -110% !important
 
 .icon
 	width: 30px;
@@ -18,10 +19,17 @@ body
 	margin-top: -44px;
 	left: 13px;
 	
-.icon path
-	fill: #fff !important
-	
-	
+#log-out
+	position: absolute;
+	bottom: 10px;
+	left: 20px;
+	background: none;
+	color: #FFF;
+	font-family: 'Open Sans';
+	cursor: pointer;
+	border: 0px;
+	z-index 2
+  
 #login
 	position absolute
 	top 0px
@@ -123,7 +131,7 @@ body
 		font-weight 600
 		text-align center
 		font-size 18px
-		
+
 .person
 	line-height: 60px;
 	height: 60px;
@@ -160,7 +168,16 @@ body
 		font-size: 13px;
 		color: #999;
 		
-			
+	.sidebarName
+		color white
+	
+	.sidebarRecentMessage
+		border 0px
+
+.sidebarPerson
+	&:hover
+		background rgba(0,0,0,0.2)
+		
 .rightbar
 	width 300px
 	position fixed
@@ -184,9 +201,9 @@ body
 	top 0px
 	bottom 0px
 	left 0px
-	background #fff
-	border-right: 1px solid #999
+	background #2A2E35
 	z-index 2
+	color: white
 	
 	.logo
 		width 300px
@@ -196,15 +213,12 @@ body
 		font-size 35px
 		font-weight 700
 		cursor pointer
-		border-bottom 1px solid silver
 
 	.profile
 		width 300px
 		text-align center
-		border-right 1px solid #999
-		border-bottom 1px solid silver
 		padding 30px 0px 20px 0px
-		background #F5F5F5
+		background rgba(0,0,0,0.2)
 		
 		.image
 			width 120px
@@ -212,7 +226,6 @@ body
 			border-radius 50%
 			margin auto
 			overflow hidden
-			border 2px solid
 			
 			img
 				width 120%
