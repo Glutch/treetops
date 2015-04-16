@@ -10,7 +10,18 @@ body
 
 .swosh
 	top -100% !important
-		
+
+.icon
+	width: 30px;
+	height: 30px;
+	position: absolute;
+	margin-top: -44px;
+	left: 13px;
+	
+.icon path
+	fill: #fff !important
+	
+	
 #login
 	position absolute
 	top 0px
@@ -40,50 +51,53 @@ body
 	}
 
 	.loginBox
-		width 400px
-		height 500px
-		position fixed
-		left 50%
-		margin-left -200px
-		top 5%
+		width: 300px;
+		height: 560px;
+		position: fixed;
+		left: 50%;
+		margin-left: -150px;
+		top: 50%;
+		margin-top: -280px
+		background: rgba(51, 51, 51, 0.95);
+		display table
+		padding 0px 0px 20px 0px
+ 
 		
 		.mainLogo
-			line-height 100px
+			padding: 21px 0px 0px 0px;
+			font-size: 34px;
 		
 	form
 		.input
-			width 300px
-			background none
-			border 0px
-			border 1px solid white
-			border-bottom 0px
-			padding 20px
-			color white
-			display table
-			margin 0px auto
-			font-size 14px
-			font-weight 200
-			outline none
-			background rgba(0,0,0,0.1)
+			width: 300px;
+			background: none;
+			border: 0px;
+			border-top: 1px solid rgba(255, 255, 255, 0.1);
+			padding: 20px 20px 20px 50px;
+			color: #FFF;
+			display: table;
+			margin: 0px auto;
+			font-size: 14px;
+			font-weight: 200;
+			outline: none;
+			background: rgba(0, 0, 0, 0.1);
 			
-			&:nth-last-child(2)
-				border-bottom 1px solid white
-				border-radius 0px 0px 10px 10px
+			&:nth-last-child(3)
+				border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 				
 			&:first-child
-				border-top 1px solid white
-				border-bottom 0px
-				border-radius 10px 10px 0px 0px
-				margin-top 20px
+				border-top: 1px solid rgba(255, 255, 255, 0.2);
+				border-bottom: 0px;
+				margin-top: 20px;
 				
 		.submit
-			padding 20px 50px
-			background none
-			color white
-			border-radius: 10px
-			border 1px solid white
-			cursor pointer
-			transition 0.1s
+			padding: 15px 50px;
+			background: none;
+			color: #FFF;
+			border: 1px solid #FFF;
+			cursor: pointer;
+			transition: 0.1s;
+			width: 260px;
 			
 			&:hover
 				background white
@@ -117,8 +131,8 @@ body
 		margin: 5px 5px 5px 10px;
 		
 	.name
-		height: 30px;
-		line-height: 47px;
+		height: 31px;
+		line-height: 43px;
 		float: left;
 		width: 215px;
 		padding: 0px 10px;
@@ -129,7 +143,7 @@ body
 		width: 215px;
 		float: left;
 		border-bottom: 1px solid #E7E2E2;
-		line-height: 20px;
+		line-height: 15px;
 		padding: 0px 10px;
 		font-size: 13px;
 		color: #999;
@@ -269,6 +283,10 @@ body
 			font-size: 14px;
 			clear both
 			margin-top: 10px
+			
+			&:before
+				content ''
+				
 			
 			&.r
 				float right
