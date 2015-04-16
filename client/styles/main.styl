@@ -30,19 +30,7 @@ body
 	
 	&:hover
 		opacity 1
- 
-.friendsInABox
-	overflow-y: scroll;
-	position: absolute;
-	bottom: 0px;
-	top: 390px;
-	
-.recentInABox
-	overflow-y: scroll;
-	position: absolute;
-	bottom: 0px;
-	top: 60px;
-	
+  
 #log-out
 	position: absolute;
 	top: 110px;
@@ -203,7 +191,16 @@ body
 		font-size: 13px;
 		color: #999;
 		
-		
+
+.friendsInABox, .recentInABox
+	position absolute
+	top 390px
+	bottom 0px
+	overflow-y scroll
+	
+.recentInABox
+	top 60px
+	
 .rightbar
 	width 300px
 	position fixed
@@ -315,6 +312,11 @@ body
 			position absolute
 			margin-left -35px
 			margin-top 3px
+			margin-right 0px
+			margin-bottom 0px
+			
+		.shake
+			animation example 0.2s infinite
 			
 		.next
 			line-height: 39px;
@@ -330,8 +332,6 @@ body
 			border: 2px solid #FFF;
 			font-weight: 600;
 	
-			&:hover
-				animation example 0.2s infinite
 		
 	.chat
 		padding 20px

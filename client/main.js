@@ -33,6 +33,12 @@ Template.layout.events({
 				console.log('success')
 			}
 		})
+	},
+	'mouseover .next': function() {
+		$('.rocket').addClass('shake')
+	},
+	'mouseleave .next': function() {
+		$('.rocket').removeClass('shake')
 	}
 })
 
