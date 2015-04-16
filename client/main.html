@@ -78,10 +78,22 @@
 <template name="sidebar">
 	<div class="sidebar">
 		<div class="logo">TREETOPS</div>
-		<div class="profile">
-			<div class="image"><img src="https://pbs.twimg.com/profile_images/434824832258023424/4wmPc-I0.png" alt=""></div>
-			<div class="name">{{currentUser.username}}</div>
-			<div class="location">Sweden</div>
+		
+		<div class="profileBox">
+			<img class="settingsButton" src="/images/settings.svg"/>
+			
+			<div class="settings">
+				<div class="arrow-up"></div>
+				<div class="button">Filters</div>
+				<div class="button">Account</div>
+				<div id="log-out" class="button">Log out</div>
+			</div>
+			
+			<div class="profile">
+				<div class="image"><img src="https://pbs.twimg.com/profile_images/434824832258023424/4wmPc-I0.png" alt=""></div>
+				<div class="name">{{currentUser.username}}</div>
+				<div class="location">Sweden</div>
+			</div>
 		</div>
 		<div class="friends">
 			<div class="header">Friends<img class="addFriend" src="/images/dragon.svg" title="Add friend"/></div>
@@ -96,7 +108,8 @@
 			</div>
 		</div>
 	</div>
-	<button id="log-out"><img src="/images/settings.svg"/></button>
+	
+	
 </template>
 
 <template name="menu">

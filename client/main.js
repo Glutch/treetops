@@ -39,6 +39,11 @@ Template.layout.events({
 	},
 	'mouseleave .next': function() {
 		$('.rocket').removeClass('shake')
+	},
+	'click .settingsButton': function() {
+		$('.profile').toggleClass('settingsActive1')
+		$('.settings').toggleClass('settingsActive2')
+		$('.settingsButton').toggleClass('settingsButtonRotate')
 	}
 })
 

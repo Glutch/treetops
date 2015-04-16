@@ -31,16 +31,25 @@ body
 	&:hover
 		opacity 1
   
-#log-out
+.settingsButton
 	position: absolute;
-	top: 110px;
+	top: 10px;
 	left: 10px;
 	background: none;
 	color: #FFF;
 	font-family: 'Open Sans';
 	cursor: pointer;
 	border: 0px;
-	z-index: 2;
+	z-index: 1000;
+	transition: 0.3s
+	-ms-transform: rotate(0deg);
+	-webkit-transform: rotate(0deg);
+	transform: rotate(0deg);
+	
+.settingsButtonRotate
+	-ms-transform: rotate(90deg);
+	-webkit-transform: rotate(90deg);
+	transform: rotate(90deg);
   
 #login
 	position absolute
@@ -226,7 +235,7 @@ body
 	.person
 		.image
 			border 2px solid black
-
+	
 .sidebar
 	width 300px
 	float left
@@ -237,6 +246,51 @@ body
 	background #2A2E35
 	z-index 2
 	color: white
+	
+	.profileBox
+		position: relative;
+		overflow: hidden;
+		
+		.settingsActive1
+			left 300px
+		
+		.settings
+			width: 300px;
+			height: 239px;
+			position: absolute;
+			z-index: 10;
+			top: 0px;
+			left: -300px;
+			background rgba(0,0,0,0.2)
+			padding 45px 0px
+			transition: 0.3s
+			
+			.arrow-up
+				top: -8px;
+				left: 8px;
+				width: 0;
+				height: 0;
+				border-left: 8px solid rgba(0, 0, 0, 0);
+				border-right: 8px solid rgba(0, 0, 0, 0);
+				border-bottom: 8px solid #224552;
+				position: absolute;
+			
+			.button
+				width: 100%;
+				padding: 7px 12px;
+				font-size: 15px;
+				color: #FFF;
+				text-align: left;
+				border-bottom: 1px solid rgba(255,255,255,0.1);
+				cursor: pointer
+				&:last-child
+					border 0px
+				&:hover
+					background rgba(255,255,255,0.05)
+					
+		.settingsActive2
+			left 0px
+	
 	
 	.person
 		.name
@@ -254,13 +308,16 @@ body
 		font-size 29px
 		cursor pointer
 		font-weight 100
-
+			
 	.profile
 		width 300px
 		text-align center
 		padding 30px 0px 20px 0px
 		background rgba(0,0,0,0.2)
-		
+		position relative
+		transition: 0.3s
+		left 0px
+				
 		.image
 			width 120px
 			height 120px
