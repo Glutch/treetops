@@ -82,17 +82,17 @@
 			<div class="location">Sweden</div>
 		</div>
 		<div class="friends">
-			<div class="header">Friends<img class="addFriend" src="images/dragon.svg" title="Add friend"/></div>
+			<div class="header">Friends<img class="addFriend" src="/images/dragon.svg" title="Add friend"/></div>
 			{{#each users}}
-			<a href="/@{{_id}}" class="person sidebarPerson">
+			<a href="/@{{_id}}" class="person">
 				<div class="image"></div>
-				<div class="name sidebarName">{{username}}</div>
-				<div class="recentMessage sidebarRecentMessage">Dildo</div>
+				<div class="name">{{username}}</div>
+				<div class="recentMessage">Dildo</div>
 			</a>
 			{{/each}}
 		</div>
 	</div>
-	<button id="log-out"><img src="images/settings.svg"/></button>
+	<button id="log-out"><img src="/images/settings.svg"/></button>
 </template>
 
 <template name="menu">

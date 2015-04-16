@@ -1,4 +1,5 @@
 @import assets
+@import keyframes
 
 *
 	vendor(box-sizing, border-box)
@@ -180,15 +181,6 @@ body
 		font-size: 13px;
 		color: #999;
 		
-	.sidebarName
-		color white
-	
-	.sidebarRecentMessage
-		border 0px
-
-.sidebarPerson
-	&:hover
-		background rgba(0,0,0,0.2)
 		
 .rightbar
 	width 300px
@@ -217,6 +209,14 @@ body
 	z-index 2
 	color: white
 	
+	.person
+		.name
+			color white
+		.recentMessage
+			border 0px
+		&:hover
+			background rgba(0,0,0,0.2)
+
 	.logo
 		width 300px
 		height 100px
@@ -305,12 +305,7 @@ body
 			font-weight: 600;
 	
 			&:hover
-				-webkit-animation-iteration-count: infinite;
-				-webkit-animation-name: example; /* Chrome, Safari, Opera */
-				-webkit-animation-duration: 0.2s; /* Chrome, Safari, Opera */
-				animation-name: example;
-				animation-duration: 0.2s;
-				animation-iteration-count: infinite;
+				animation example 0.2s infinite
 		
 	.chat
 		padding 20px
@@ -357,20 +352,3 @@ body
 				font-size 15px
 				border 0px
 				outline none
-				
-/* Chrome, Safari, Opera */
-@-webkit-keyframes example {
-    0%   {margin-top: -2x}
-    25%  {margin-right: -2px}
-    50%  {margin-left: -2px}
-    100% {margin-bottom: -2px}
-}
-
-/* Standard syntax */
-@keyframes example {
-    0%   {margin-top: -2x}
-    25%  {margin-right: -2px}
-    50%  {margin-left: -2px}
-    100% {margin-bottom: -2px}
-}
-			
