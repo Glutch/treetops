@@ -10,24 +10,24 @@ body
 	overflow: hidden
 
 .swosh
-	right -110% !important
+	transform translateX(100%)
 
 .icon
-	width: 30px;
-	height: 30px;
-	position: absolute;
-	margin-top: -44px;
-	left: 13px;
+	width 30px
+	height 30px
+	position absolute
+	margin-top -44px
+	left 13px
 	
 #log-out
-	position: absolute;
-	bottom: 10px;
-	left: 20px;
-	background: none;
-	color: #FFF;
-	font-family: 'Open Sans';
-	cursor: pointer;
-	border: 0px;
+	position absolute
+	bottom 10px
+	left 20px
+	background none
+	color #FFF
+	font-family 'Open Sans'
+	cursor pointer
+	border 0px
 	z-index 2
   
 #login
@@ -38,23 +38,23 @@ body
 	height 100%
 	background black
 	z-index 100
-	transition 0.6s
+	transition 0.4s
 	font-size 49px
 	color white
 	text-align center
 	font-weight 600
 	&:after
-		content: "";
-		background: url('/images/treetops.jpg')
+		content ''
+		background url('/images/treetops.jpg')
 		background-position center
-		background-size 100%
-		opacity: 0.9;
-		top: 0;
-		left: 0;
-		bottom: 0;
-		right: 0;
-		position: absolute;
-		z-index: -1;   
+		background-size 100% 100%
+		opacity 0.9
+		top 0
+		left 0
+		bottom 0
+		right 0
+		position absolute
+		z-index -1
 	
 	::-webkit-input-placeholder {
 		color #fff
@@ -80,7 +80,8 @@ body
 		background: rgba(51, 51, 51, 0.95);
 		display table
 		padding 0px 0px 20px 0px
-		transition 0.6s
+		transition 0.4s
+		transition-delay 0.2s
  
 		
 		.mainLogo
@@ -317,16 +318,15 @@ body
 			font-size: 14px;
 			clear both
 			margin-top: 10px
-			
+
 			&:before
 				content ''
-				
-			
+
 			&.r
 				float right
 				background #528DE7
 				color #fff
-	
+
 	.chatBox
 		position fixed
 		left 300px
@@ -336,10 +336,9 @@ body
 		background white
 		padding 0px 40px
 		border-top 1px solid silver
-        
+
 		form
 			height 100%
-			
 			input
 				width 100%
 				height 100%
