@@ -63,13 +63,15 @@
 <template name="rightbar">
 	<div class="rightbar">
 		<div class="header">Recent Conversations</div>
-		{{#each users}}
-		<a href="/@{{_id}}" class="person">
-			<div class="image"><img src="images/illuminati.svg" class="illuminati"/></div>
-			<div class="name">{{username}}</div>
-			<div class="recentMessage">Dildo</div>
-		</a>
-		{{/each}}
+		<div class="recentInABox">
+			{{#each users}}
+			<a href="/@{{_id}}" class="person">
+				<div class="image"><img src="images/illuminati.svg" class="illuminati"/></div>
+				<div class="name">{{username}}</div>
+				<div class="recentMessage">Dildo</div>
+			</a>
+			{{/each}}
+		</div>
 	</div>
 </template>
 
@@ -83,13 +85,15 @@
 		</div>
 		<div class="friends">
 			<div class="header">Friends<img class="addFriend" src="/images/dragon.svg" title="Add friend"/></div>
-			{{#each users}}
-			<a href="/@{{_id}}" class="person">
-				<div class="image"><img src="images/unicorn.svg" class="unicorn"/></div>
-				<div class="name">{{username}}</div>
-				<div class="recentMessage">Dildo</div>
-			</a>
-			{{/each}}
+			<div class="friendsInABox">
+				{{#each users}}
+				<a href="/@{{_id}}" class="person">
+					<div class="image"><img src="images/unicorn.svg" class="unicorn"/></div>
+					<div class="name">{{username}}</div>
+					<div class="recentMessage">Dildo</div>
+				</a>
+				{{/each}}
+			</div>
 		</div>
 	</div>
 	<button id="log-out"><img src="/images/settings.svg"/></button>
