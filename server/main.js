@@ -22,3 +22,5 @@ Accounts.validateNewUser(function(user) {
 	user.nick = user.username.replace(/\s/g, '.').toLowerCase()
 	return true
 })
+
+console.log('helo')
