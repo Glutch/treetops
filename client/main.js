@@ -34,12 +34,6 @@ Template.layout.events({
 			}
 		})
 	},
-	'mouseover .next': function() {
-		$('.rocket').addClass('shake')
-	},
-	'mouseleave .next': function() {
-		$('.rocket').removeClass('shake')
-	},
 	'click .settingsButton': function() {
 		$('.profile').toggleClass('settingsActive1')
 		$('.settings').toggleClass('settingsActive2')
@@ -72,15 +66,6 @@ Template.chat.helpers({
 	},
 	formatTime: function(date) {
 		return moment(date).format('HH:mm:ss')
-	},
-	showUsername: function() {
-		return Meteor.user().username
-	},
-	currentPageFisk: function() {
-		return Session.get('currentPage')
-	},
-	getUsername: function(user_id) {
-		return Meteor.users.find({_id: user_id}).username
 	}
 })
 
