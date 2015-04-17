@@ -4,7 +4,8 @@ Meteor.subscribe('users')
 var M = Message.find({}, {sort: {date: 1}})
 
 var scrollToBottom = function() {
-	var chat = $('.chat')[0]
+	var chat = document.getElementById('chat')
+	if (!chat) return
 	chat.scrollTop = chat.scrollHeight
 }
 
@@ -26,11 +27,10 @@ Template.layout.events({
 	'submit #sign-up': function(e) {
 		e.preventDefault()
 		var fields = $(e.target).toObject()
-		 Accounts.createUser(fields, function(err) {
+		Accounts.createUser(fields, function(err) {
 			if (err) {
+				alert('something went wrong, check console')
 				console.log(err)
-			} else {
-				console.log('success')
 			}
 		})
 	},

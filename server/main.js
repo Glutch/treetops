@@ -17,3 +17,8 @@ Meteor.publish('messages', function() {
 Meteor.publish('users', function() {
 	return Meteor.users.find({})
 })
+
+Accounts.validateNewUser(function(user) {
+	user.nick = user.username.replace(/\s/g, '.').toLowerCase()
+	return true
+})

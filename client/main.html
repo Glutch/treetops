@@ -43,7 +43,7 @@
 		<div class="name">{{target.username}}</div>
 		<div class="next"><img src="/images/rocket.svg" class="rocket"/>Scramble</div>
 	</div>
-	<div class="chat">
+	<div id="chat">
 	{{#each messages}}
 		<div class="message {{#if equals from currentUser._id}}r{{/if}}">{{message}}</div>
 	{{/each}}
@@ -65,7 +65,7 @@
 		<div class="header">Recent Conversations</div>
 		<div class="recentInABox">
 			{{#each users}}
-			<a href="/@{{_id}}" class="person">
+			<a href="/@{{nick}}" class="person">
 				<div class="image"><img src="images/illuminati.svg" class="illuminati"/></div>
 				<div class="name">{{username}}</div>
 				<div class="recentMessage">Dildo</div>
@@ -99,7 +99,7 @@
 			<div class="header">Friends<img class="addFriend" src="/images/dragon.svg" title="Add friend"/></div>
 			<div class="friendsInABox">
 				{{#each users}}
-				<a href="/@{{_id}}" class="person">
+				<a href="/@{{nick}}" class="person">
 					<div class="image"><img src="images/unicorn.svg" class="unicorn"/></div>
 					<div class="name">{{username}}</div>
 					<div class="recentMessage">Dildo</div>
@@ -108,8 +108,6 @@
 			</div>
 		</div>
 	</div>
-	
-	
 </template>
 
 <template name="menu">
