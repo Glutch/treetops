@@ -44,6 +44,15 @@ Template.layout.events({
 		$('.profile').toggleClass('settingsActive1')
 		$('.settings').toggleClass('settingsActive2')
 		$('.settingsButton').toggleClass('settingsButtonRotate')
+		
+		$('.addFriendBox').removeClass('addFriendBoxActive')
+		$('.settings').removeClass('addFriendBoxActive2')
+		$('.profile').removeClass('addFriendBoxActive2')
+	},
+	'click .addFriend': function() {
+		$('.addFriendBox').toggleClass('addFriendBoxActive')
+		$('.settings').toggleClass('addFriendBoxActive2')
+		$('.profile').toggleClass('addFriendBoxActive2')
 	}
 })
 
